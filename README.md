@@ -20,6 +20,8 @@ Iterates over all rules in the rule set. For `oneOf` child rules, iteration cont
 **Update a rule based on a filename that the rule would match.**
 
 ``` javascript
+const WebpackRuleset = require('webpack-ruleset);
+
 const ruleSet = new WebpackRuleset(webpackConfig.module.rules);
 
 ruleSet.forEach(rule => {
