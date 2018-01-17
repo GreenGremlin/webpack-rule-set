@@ -2,7 +2,7 @@
 
 WebpackRuleset is a slimmed down version of `webpack/lib/RuleSet` for matching, modifying, and inserting rules in webpack config. [Webpack's included RuleSet class][webpacks-rule-set] normalizes it's rule set, which means the list of loaders returned is not the original rules from config. This class simulates what Webpack's RuleSet does, but keeps a reference to the original rules from config. This allows WebpackRuleset to be used to mutate a Webpack config in place.
 
-[webpacks-rule-set]: [https://github.com/webpack/webpack/blob/v3.5.1/lib/RuleSet.js]
+[webpacks-rule-set]: https://github.com/webpack/webpack/blob/v3.5.1/lib/RuleSet.js
 
 ## Installation
 

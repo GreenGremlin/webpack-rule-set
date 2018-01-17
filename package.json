@@ -1,6 +1,6 @@
 {
   "name": "webpack-ruleset",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A class for working with webpack config rules.",
   "homepage": "https://github.com/GreenGremlin/webpack-rule-set",
   "author": {
