@@ -2,16 +2,20 @@
   "name": "webpack-rule-matcher",
   "version": "0.1.0",
   "description": "A class for working with webpack config objects",
+  "homepage": "https://github.com/GreenGremlin/webpack-rule-set",
+  "author": {
+    "name" : "Jonathan Felchlin",
+    "email" : "jonathan@xgecko.com"
+  },
   "repository": {
     "type": "git",
-    "url": "github.com/GreenGremlin/webpack-rule-set"
+    "url": "https://github.com/GreenGremlin/webpack-rule-set.git"
   },
   "main": "index.js",
   "scripts": {
     "lint": "eslint **/*.js",
     "test": "npm run lint && jasmine JASMINE_CONFIG_PATH=test/support/jasmine.json"
   },
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^4.15.0",
@@ -23,6 +27,6 @@
     "webpack": "^3.8.1"
   },
   "peerDependencies": {
-    "webpack": "^3.8.1"
+    "webpack": "^3.8.0"
   }
 }
