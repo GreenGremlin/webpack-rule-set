@@ -13,6 +13,8 @@ npm install webpack-ruleset
 A Webpack config rule can include a child lists of rules as either `rules` or `oneOf` attributes. WebpackRuleset will iterate over child rules simmilar to how Webpack iterates over rules when processing an imported resource.
 
 
+## Usage
+
 ### `forEach(action)`
 
 Iterates over all rules in the rule set. For `oneOf` child rules, iteration continues until `action` returns a truthy value.
