@@ -1,7 +1,7 @@
 {
-  "name": "webpack-rule-matcher",
+  "name": "webpack-ruleset",
   "version": "0.1.0",
-  "description": "A class for working with webpack config objects",
+  "description": "A class for working with webpack config rules.",
   "homepage": "https://github.com/GreenGremlin/webpack-rule-set",
   "author": {
     "name" : "Jonathan Felchlin",

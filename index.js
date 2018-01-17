@@ -1,3 +1,3 @@
-const WebpackRuleSet = require('./lib/RuleSet');
+const WebpackRuleset = require('./lib/WebpackRuleset');
 
-module.exports = WebpackRuleSet;
+module.exports = WebpackRuleset;
