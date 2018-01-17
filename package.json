@@ -1,11 +1,28 @@
 {
   "name": "webpack-rule-matcher",
-  "version": "1.0.0",
-  "description": "A class for modifying webpack config objects",
+  "version": "0.1.0",
+  "description": "A class for working with webpack config objects",
+  "repository": {
+    "type": "git",
+    "url": "github.com/GreenGremlin/webpack-rule-set"
+  },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint **/*.js",
+    "test": "npm run lint && jasmine JASMINE_CONFIG_PATH=test/support/jasmine.json"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "jasmine": "2.8.0",
+    "jasmine-reporters": "2.2.1",
+    "jasmine-spec-reporter": "4.2.1",
+    "webpack": "^3.8.1"
+  },
+  "peerDependencies": {
+    "webpack": "^3.8.1"
+  }
 }
