@@ -55,9 +55,17 @@ ruleSet.forAll(rule => {
 
 WebpackRuleset also includes a number of matcher methods. Matcher methods take a matcher as their first argument.
 
-The matcher argument can be any of the following:
+The `matcher` argument can be any of the following:
 
-- A function, which will be passed both the rule and Webpack "normalized" rule and should return true for a matching rule and false for a non-matching rule.
+- A function, which will be passed both the rule and [Webpack "normalized" rule][webpack-normalize-rule] and should return true for a matching rule and false for a non-matching rule.
+
+[webpack-normalize-rule]: https://github.com/webpack/webpack/blob/v3.5.1/lib/RuleSet.js#L95
+
+``` javascript
+function matcher(rule, normalizedRule) {
+    return normalizedRule.resource && normalizedRule.resource('any.css');
+}
+```
 
 - A resource path string to test rules against.
     examples:
@@ -65,7 +73,15 @@ The matcher argument can be any of the following:
         "src/styles.css"  -  resolved relative to process.cwd()
         ".css"            -  treated as "fake_file.css"
 
+``` javascript
+const matcher = '.css';
+```
+
 - A string suffexed with "-loader". If the matcher is a string ending in "-loader", it will be matched against
+
+``` javascript
+const matcher = 'babel-loader';
+```
 
 - An object with `action`, `loader`, or `resource` and optional `loaderType` ('pre' or 'post') attributes. Specifying a matcher as an object allows you to specify wether you want to match pre or post loaders.
 
