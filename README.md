@@ -15,7 +15,7 @@ A Webpack config rule can include a child lists of rules as either `rules` or `o
 
 ## Usage
 
-### `forEach(action)`
+### `WebpackRuleset.forEach(action)`
 
 Iterates over all rules in the rule set. For `oneOf` child rules, iteration continues until `action` returns a truthy value.
 
@@ -36,7 +36,7 @@ ruleSet.forEach(rule => {
 ```
 
 
-### `forAll(action)`
+### `WebpackRuleset.forAll(action)`
 
 Iterates over all rules in the rule set. For `oneOf` child rules, iteration continues regardless of what value `action` returns.
 
@@ -78,7 +78,7 @@ const action = {     // Matches pre-loaders that would match files with the .js 
 ```
 
 
-### `forMatching(matcher, action)`
+### `WebpackRuleset.forMatching(matcher, action)`
 
 Locate and execute the action on the first matching rule.
 
@@ -105,7 +105,7 @@ ruleSet.forMatching('css-loader', cssRule => {
 ```
 
 
-### `forAllMatching(matcher, action)`
+### `WebpackRuleset.forAllMatching(matcher, action)`
 
 Locate and execute the action on all rules that match.
 
@@ -123,7 +123,7 @@ ruleSet.forAllMatching(rulesWithHashedNames, rule => {
 ```
 
 
-### `filter(matcher)`
+### `WebpackRuleset.filter(matcher)`
 
 Gathers matching rules into a flat array.
 
@@ -136,7 +136,7 @@ const cssLoaders = ruleSet.filter('.css');
 ```
 
 
-### `filterAll(matcher)`
+### `WebpackRuleset.filterAll(matcher)`
 
 Gathers matching rules into a flat array.
 
@@ -149,7 +149,7 @@ const cssLoaders = ruleSet.filterAll('.css');
 ```
 
 
-### `getOneRule(matcher)`
+### `WebpackRuleset.getOneRule(matcher)`
 
 Locate a matching rule. Asserts that only one rule matches.
 
@@ -161,7 +161,7 @@ jsRule.options.babelrc = true;
 ```
 
 
-### `insertRuleBeforeMatch(matcher, insert)`
+### `WebpackRuleset.insertRuleBeforeMatch(matcher, insert)`
 
 Inserts a new rule before the matching rule. Asserts that only one matching rule is found.
 
@@ -194,6 +194,6 @@ ruleSet.insertRuleBeforeMatch('.css', globalCssRule => {
 ```
 
 
-### `insertRuleAfterMatch(matcher, insert)`
+### `WebpackRuleset.insertRuleAfterMatch(matcher, insert)`
 
 Same as `insertRuleBeforeMatch`, except that the new rule is inserted after the matching rule.
