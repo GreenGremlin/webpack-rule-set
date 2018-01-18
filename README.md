@@ -62,8 +62,11 @@ The `matcher` argument can be any of the following:
 [webpack-normalize-rule]: https://github.com/webpack/webpack/blob/v3.5.1/lib/RuleSet.js#L95
 
 ``` javascript
-function matcher(rule, normalizedRule) {
-    return normalizedRule.resource && normalizedRule.resource('any.css');
+function matcher(normalizedRule, rule) {
+    return (
+        normalizedRule.resource &&
+        normalizedRule.resource('any.css')
+    );
 }
 ```
 
